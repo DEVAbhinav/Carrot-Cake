@@ -1,8 +1,13 @@
-#include<stdio.h>
+#include <iostream>
+#include <string>
+
+
+using namespace std;
+
 
 int main()
 {	int i= 0,T,arr[8];
-	char seat = ["1LB","2MB","3UP","4LB","5MB","6UB","7SL","8SU"];
+	string seat[] = ["1LB","2MB","3UP","4LB","5MB","6UB","7SL","8SU"];
 	/* code */
 	scanf("%d",&T);
 	//taking input of the data.
