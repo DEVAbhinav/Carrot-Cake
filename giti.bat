@@ -2,11 +2,8 @@
 
 
 git pull
-pause
 git add .
 pause
-echo Enter a commit message
-set /p commitMessage = 
-git commit -m %commitMessage%
+git commit -m "minor change"
 git push 
 pause

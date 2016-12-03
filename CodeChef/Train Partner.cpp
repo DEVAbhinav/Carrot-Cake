@@ -22,6 +22,7 @@ int main()
 	for (i=0;i<T;i++) {
 		value = arr[i];
 
+		
 		if (value<7) {
 			arr[i] = (arr[i] + 2)%6;
 		}	
