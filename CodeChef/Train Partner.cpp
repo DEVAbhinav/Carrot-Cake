@@ -21,15 +21,17 @@ int main()
 
 	for (i=0;i<T;i++) {
 		value = arr[i];
+
 		if (value<7) {
 			arr[i] = (arr[i] + 2)%6;
-		}
-
+		}	
+		else {
 		arr[i] = ((arr[i])%2+6)
 		i++;
+		}
 	}
 	for (i=0;i<T;i++)
-		printf("%s",seat[i]);
+		printf("%s",seat[arr[i]]);
 
 	return 0;
 }
