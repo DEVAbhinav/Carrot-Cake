@@ -34,4 +34,5 @@ int main()
 		cout<<seat[arr[i]]<<endl;
 
 	return 0;
+
 }
