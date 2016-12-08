@@ -1,7 +1,7 @@
 #!/bin/bash
 
 
-git pull
+@rem git pull
 git add .
 pause
 set /p id="Enter commit Message: "
