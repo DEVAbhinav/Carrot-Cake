@@ -4,6 +4,7 @@
 git pull
 git add .
 pause
-git commit -m "minor change"
+set /p id="Enter commit Message: "
+git commit -m %id%
 git push 
 pause
