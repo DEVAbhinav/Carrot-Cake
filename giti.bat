@@ -1,5 +1,5 @@
 #!/bin/bash
-
+@echo off
 
 @rem git pull
 git add .
