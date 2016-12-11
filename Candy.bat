@@ -2,10 +2,10 @@
 :: textSubmitter.bat
 @echo off
 explorer D:\Abhinav\Projects\carrot-cake\CodeChef
-start D:\Abhinav\Projects\carrot-cake\CodeChef
-d:
-cd D:\Abhinav\Projects\carrot-cake\CodeChef
-cmd.exe
+
+@rem d:
+@rem cd D:\Abhinav\Projects\carrot-cake\CodeChef
+start cmd.exe D:\Abhinav\Projects\carrot-cake\CodeChef
 for /f "tokens=* delims=" %%p in ('mshta.exe "%~f0"') do (
     set "text=%%p"
 )
