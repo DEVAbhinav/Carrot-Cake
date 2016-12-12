@@ -1,36 +1,56 @@
 <!-- :
 :: textSubmitter.bat
 @echo off
-explorer D:\Abhinav\Projects\carrot-cake\CodeChef
 
+for /f "tokens=* delims=" %%p in ('mshta.exe "%~f0"') do (
+    set "choice=%%p"
+)
+if %choice%==codeChef (
+explorer D:\Abhinav\Projects\carrot-cake\CodeChef
 @rem d:
 @rem cd D:\Abhinav\Projects\carrot-cake\CodeChef
 start cmd.exe D:\Abhinav\Projects\carrot-cake\CodeChef
-for /f "tokens=* delims=" %%p in ('mshta.exe "%~f0"') do (
-    set "text=%%p"
 )
 
-echo your text is %text%
+if %choice%==fantasy (
+explorer D:\Abhinav\Projects\3rd yr\fantasy
+
+start cmd.exe D:\Abhinav\Projects\3rd yr\fantasy
+)
+
+if %choice%==scrapeAmazon (
+explorer D:\Abhinav\Projects\3rd yr\scrapeAmazon
+
+start cmd.exe D:\Abhinav\Projects\3rd yr\scrapeAmazon
+)
+
+echo your choice is %choice%
 pause
 exit /b
 -->
 
 <html>
-<head><title>text submitter</title></head>
+<head><title>choice submitter</title></head>
 <body>
 
     <script language='javascript' >
-        function pipeText() {
-            var pass=document.getElementById('pass').value;
+        function pipeText(pass) {
+            var choice=pass.value;
+            //console.log(pass);
             var fso= new ActiveXObject('Scripting.FileSystemObject').GetStandardStream(1);
-            close(fso.Write(pass));
+            close(fso.Write(choice));
 
         }
     </script>
 
-    <input type='text' name='pass' size='15'></input>
+    <input type='button' name='codeChef' value= "codeChef" onClick="pipeText(this)"  size='15'></input>
     <hr>
-    <button onclick='pipeText()'>Submit</button>
+    <input type='button' name='Fantasy' value= "fantasy"  onClick="pipeText(this)" size='15'></input>
+    <hr>
+    <input type='button' name='scrapeAmazon' value= "scrapeAmazon" onClick="pipeText(this)"  size='15'></input>
+    
+    <hr>
+    
 
 </body>
 </html>
