@@ -46,9 +46,10 @@ long int minMarksNeeded ( int totalMarks[], int k,int l,int r) {
 		if(k-1<pos-l)
 			minMarksNeeded(totalMarks, k,l, pos-1);
 		if(k>pos-l)
-			minMarksNeeded(totalMarks, k-pos+l+1,pos+1,r);
+			minMarksNeeded(totalMarks, k-pos+l+1, pos+1,r);
 		else
 			return totalMarks[pos];
+		
 	}
 
 }
