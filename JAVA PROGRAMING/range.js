@@ -6,8 +6,7 @@ function range( a, b) {
 
 }
 
-//range(1,10);
-
+//range(1,10)
 
 function reduce(array, combine, start) {
 	var current = start;
